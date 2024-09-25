@@ -1,9 +1,5 @@
-class Solution(object):
-    def longestWPI(self, hours):
-        """
-        :type hours: List[int]
-        :rtype: int
-        """
+class Solution:
+    def longestWPI(self, hours: List[int]) -> int:
         ans = s = 0
         pos = {}
         for i, x in enumerate(hours):
