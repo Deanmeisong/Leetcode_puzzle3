@@ -1,5 +1,10 @@
-class Solution:
-    def minimumCost(self, n: int, connections: List[List[int]]) -> int:
+class Solution(object):
+    def minimumCost(self, n, connections):
+        """
+        :type n: int
+        :type connections: List[List[int]]
+        :rtype: int
+        """
         def find(x):
             if p[x] != x:
                 p[x] = find(p[x])
