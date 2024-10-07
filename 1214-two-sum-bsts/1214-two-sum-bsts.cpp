@@ -11,14 +11,15 @@
  */
 class Solution {
 public:
+    vector<int> nums[2];
+    void inorder(TreeNode* root, int i) {
+        if(!root) return;
+        inorder(root->left, i);
+        nums[i].push_back(root->val);
+        inorder(root->right, i);
+    }
+    
     bool twoSumBSTs(TreeNode* root1, TreeNode* root2, int target) {
-        vector<int> nums[2];
-        function<void(TreeNode*, int)> inorder = [&](TreeNode* root, int i) {
-            if(!root) return;
-            inorder(root->left, i);
-            nums[i].push_back(root->val);
-            inorder(root->right, i);
-        };
         inorder(root1, 0);
         inorder(root2, 1);
         int sum = 0;
