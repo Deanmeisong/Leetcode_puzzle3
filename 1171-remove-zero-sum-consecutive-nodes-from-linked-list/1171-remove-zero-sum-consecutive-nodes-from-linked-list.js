@@ -19,7 +19,7 @@ var removeZeroSumSublists = function(head) {
         s += cur.val;
         last.set(s, cur);
     }
-
+//S
     s = 0;
 
     // Second pass: connect nodes to skip zero-sum sublists
