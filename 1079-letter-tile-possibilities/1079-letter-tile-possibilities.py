@@ -1,6 +1,10 @@
-class Solution:
-    def numTilePossibilities(self, tiles: str) -> int:
-        def dfs(cnt: Counter) -> int:
+class Solution(object):
+    def numTilePossibilities(self, tiles):
+        """
+        :type tiles: str
+        :rtype: int
+        """
+        def dfs(cnt):
             ans = 0
             for i, x in cnt.items():
                 if x > 0:
