@@ -1,5 +1,5 @@
-class Solution(object):
-    def probabilityOfHeads(self, prob, target):
+class Solution:
+    def probabilityOfHeads(self, prob: List[float], target: int) -> float:
         n = len(prob)
         f = [[0] * (target + 1) for _ in range(n + 1)]
         f[0][0] = 1
