@@ -1,5 +1,5 @@
-class Solution(object):
-    def countSteppingNumbers(self, low, high):
+class Solution:
+    def countSteppingNumbers(self, low: int, high: int) -> List[int]:
         ans = []
         if low == 0:
             ans.append(0)
