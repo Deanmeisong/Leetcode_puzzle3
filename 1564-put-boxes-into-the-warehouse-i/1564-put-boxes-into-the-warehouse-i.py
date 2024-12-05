@@ -1,10 +1,5 @@
-class Solution(object):
-    def maxBoxesInWarehouse(self, boxes, warehouse):
-        """
-        :type boxes: List[int]
-        :type warehouse: List[int]
-        :rtype: int
-        """
+class Solution:
+    def maxBoxesInWarehouse(self, boxes: List[int], warehouse: List[int]) -> int:
         n = len(warehouse)
         left = [warehouse[0]] * n
         for i in range(1, n):
