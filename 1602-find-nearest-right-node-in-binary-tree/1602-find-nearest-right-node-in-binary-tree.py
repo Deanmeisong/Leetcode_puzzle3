@@ -6,13 +6,19 @@
 #         self.right = right
 class Solution:
     def findNearestRightNode(self, root: TreeNode, u: TreeNode) -> Optional[TreeNode]:
-        q = deque([root])
-        while q:
-            for i in range(len(q)-1, -1, -1):
-                root = q.popleft()
-                if root == u:
-                    return q[0] if i else None
-                if root.left:
-                    q.append(root.left)
-                if root.right:
-                    q.append(root.right)
+        def dfs(root, i):
+            nonlocal d, ans
+            if root is None or ans: return
+            if d == i:
+                ans = root
+                return
+            if root == u:
+                d = i;
+                return
+            dfs(root.left, i+1)
+            dfs(root.right, i+1)
+            
+        d, ans = 0, None
+        dfs(root, 1)
+        return ans
+            
