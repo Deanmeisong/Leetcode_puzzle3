@@ -7,11 +7,11 @@ class Solution:
         ans = 0
   
         
-        # while q:
-        #     ans += 1
-        #     for _ in range(len(q)):
-        #         i, j = q.popleft()
-        #         for a, b in pairwise(dirs):
+        while q:
+            ans += 1
+            for _ in range(len(q)):
+                i, j = q.popleft()
+                for a, b in pairwise(dirs):
         #             x, y = i+a, j+b
         #             if 0 <= x < m and 0 <= y < n:
         #                 if grid[x][y] == '#': return ans
@@ -20,11 +20,11 @@ class Solution:
         #                     q.append((x,y))
         
         
-        while q:
-            ans += 1
-            for _ in range(len(q)):
-                i, j = q.popleft()
-                for a, b in pairwise(dirs):
+        # while q:
+        #     ans += 1
+        #     for _ in range(len(q)):
+        #         i, j = q.popleft()
+        #         for a, b in pairwise(dirs):
                     x, y = i + a, j + b
                     if 0 <= x < m and 0 <= y < n:
                         if grid[x][y] == '#':
