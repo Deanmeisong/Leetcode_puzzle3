@@ -15,11 +15,8 @@ class Solution:
                     x, y = i+a, j+b
                     if 0 <= x < m and 0 <= y < n:
                         if grid[x][y] == '#': return ans
-        #                 if grid[x][y] == 'O':
-        #                     grid[x][y] == 'X'
-        #                     q.append((x,y))
-        
                         if grid[x][y] == 'O':
                             grid[x][y] = 'X'
-                            q.append((x, y))
+                            q.append((x,y))
+
         return -1
