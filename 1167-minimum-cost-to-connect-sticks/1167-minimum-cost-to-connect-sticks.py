@@ -1,5 +1,9 @@
-class Solution:
-    def connectSticks(self, sticks: List[int]) -> int:
+class Solution(object):
+    def connectSticks(self, sticks):
+        """
+        :type sticks: List[int]
+        :rtype: int
+        """
         heapify(sticks)
         ans = 0
         while len(sticks) > 1:
