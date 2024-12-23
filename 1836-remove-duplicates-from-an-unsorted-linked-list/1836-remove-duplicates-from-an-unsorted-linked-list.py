@@ -20,7 +20,7 @@ class Solution(object):
             if cnt[cur.val] > 1:
                 pre.next = cur.next
             else:
-                pre = cur
+                pre = pre.next
             cur = cur.next
         
         return dummy.next
